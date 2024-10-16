@@ -16,9 +16,15 @@
   <content_attribute id="social-chat">mild</content_attribute>
   </content_rating>
   <screenshots>
-    <screenshot type="default">http://www.rolisteam.org/images/screens/1.9.0/default_screen_password.jpg</screenshot>
-    <screenshot>http://www.rolisteam.org/images/screens/1.9.0/scenario_open.jpg</screenshot>
-    <screenshot>http://www.rolisteam.org/images/screens/1.9.0/pdf_viewer.jpg</screenshot>
+    <screenshot type="default">
+      <image>https://www.rolisteam.org/images/screens/1.9.0/default_screen_password.jpg</image>
+    </screenshot>
+    <screenshot>
+      <image>https://www.rolisteam.org/images/screens/1.9.0/scenario_open.jpg</image>
+    </screenshot>
+    <screenshot>
+      <image>https://www.rolisteam.org/images/screens/1.9.0/pdf_viewer.jpg</image>
+    </screenshot>
   </screenshots>
   <releases>
     <release date="2019-10-05" version="1.9.0"/>
