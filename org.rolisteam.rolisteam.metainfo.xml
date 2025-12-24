@@ -18,12 +18,15 @@
   <screenshots>
     <screenshot type="default">
       <image>https://www.rolisteam.org/images/screens/1.9.0/default_screen_password.jpg</image>
+      <caption>Connection dialog</caption>
     </screenshot>
     <screenshot>
       <image>https://www.rolisteam.org/images/screens/1.9.0/scenario_open.jpg</image>
+      <caption>Open scenario</caption>
     </screenshot>
     <screenshot>
       <image>https://www.rolisteam.org/images/screens/1.9.0/pdf_viewer.jpg</image>
+      <caption>PDF Viewer</caption>
     </screenshot>
   </screenshots>
   <releases>
