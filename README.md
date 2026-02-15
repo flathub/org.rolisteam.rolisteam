@@ -6,13 +6,13 @@ Copy the contents of the flatpak directory into a build area.
 
 Run:
 
-    flatpak-builder --force-clean org.rolisteam.rolisteam  rolisteam.json
+    flatpak-builder --force-clean org.rolisteam.rolisteam  org.rolisteam.rolisteam.json
 
 This will build the sandbox.
 
 To install into a local repositry you need first to create one.
 
-    flatpak-builder --repo=.repo --ccache --force-clean .app-dir rolisteam.json
+    flatpak-builder --repo=.repo --ccache --force-clean .app-dir org.rolisteam.rolisteam.json
 
 And then to add it
 
