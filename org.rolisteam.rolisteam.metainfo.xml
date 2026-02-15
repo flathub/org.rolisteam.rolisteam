@@ -17,20 +17,20 @@
   </content_rating>
   <screenshots>
     <screenshot type="default">
-      <image>https://www.rolisteam.org/images/screens/1.9.0/default_screen_password.jpg</image>
+      <image>https://doc.rolisteam.org/images/en/connection_dialog.jpg</image>
       <caption>Connection dialog</caption>
     </screenshot>
     <screenshot>
-      <image>https://www.rolisteam.org/images/screens/1.9.0/scenario_open.jpg</image>
+      <image>https://doc.rolisteam.org/images/charactersheet2.jpg</image>
       <caption>Open scenario</caption>
     </screenshot>
     <screenshot>
-      <image>https://www.rolisteam.org/images/screens/1.9.0/pdf_viewer.jpg</image>
+      <image>https://doc.rolisteam.org/images/pdf/pdf1.png</image>
       <caption>PDF Viewer</caption>
     </screenshot>
   </screenshots>
   <releases>
-    <release date="2019-10-05" version="1.9.0"/>
+    <release date="2026-02-15" version="1.10.0"/>
   </releases>
-  <update_contact>http://www.rolisteam.org/contactus</update_contact>
+  <update_contact>https://rolisteam.org/03_contact/</update_contact>
 </component>
