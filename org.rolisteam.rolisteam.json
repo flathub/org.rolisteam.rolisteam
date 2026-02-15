@@ -1,78 +1,48 @@
 {
-  "id": "org.rolisteam.rolisteam",
-  "base": "io.qt.qtwebengine.BaseApp",
-  "base-version": "5.15-25.08",
-  "runtime": "org.kde.Platform",
-  "runtime-version": "5.15-25.08",
-  "sdk": "org.kde.Sdk",
-  "command": "rolisteam",
-  "finish-args": [
-    "--device=dri",
-    "--share=ipc",
-    "--socket=fallback-x11",
-    "--socket=wayland",
-    "--share=network",
-    "--socket=pulseaudio",
-    "--filesystem=home",
-    "--env=TMPDIR=/var/tmp",
-    "--env=GST_PLUGIN_PATH=/usr/lib/x86_64-linux-gnu/gstreamer-1.0/:/usr/lib/aarch64-linux-gnu/gstreamer-1.0/"
-  ],
-  "cleanup-commands": [
-    "/app/cleanup-BaseApp.sh"
-  ],
-  "modules": [
-    {
-      "name": "libkdegames",
-      "buildsystem": "cmake-ninja",
-      "sources": [
+    "id": "org.rolisteam.rolisteam",
+    "base": "io.qt.qtwebengine.BaseApp",
+    "base-version": "6.10",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "6.10",
+    "sdk": "org.kde.Sdk",
+    "command": "rolisteam",
+    "finish-args": [
+        "--device=dri",
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--filesystem=xdg-documents",
+        "--env=TMPDIR=/var/tmp",
+        "--env=GST_PLUGIN_PATH=/usr/lib/x86_64-linux-gnu/gstreamer-1.0/:/usr/lib/aarch64-linux-gnu/gstreamer-1.0/"
+    ],
+    "cleanup-commands": [
+        "/app/cleanup-BaseApp.sh"
+    ],
+    "modules": [
         {
-          "type": "git",
-          "url": "https://invent.kde.org/games/libkdegames.git",
-          "tag": "v20.12.0",
-          "commit": "50d31048dabcc20a47dee28239bee37a15f48b71"
+            "name": "rolisteam",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DCMAKE_BUILD_TYPE:STRING=Release", 
+                "-DBUILD_TESTING:BOOL=OFF"
+            ],
+            "post-install": [
+                "rm -f /app/share/metainfo/org.rolisteam.rolisteam.appdata.xml",
+                "install -Dm644 org.rolisteam.rolisteam.metainfo.xml /app/share/metainfo/org.rolisteam.rolisteam.metainfo.xml"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/rolisteam/rolisteam.git",
+                    "commit": "c591288428459345c80abfb21100f95fbb0486bb"
+                },
+                {
+                    "type": "file",
+                    "path": "org.rolisteam.rolisteam.metainfo.xml"
+                }
+            ]
         }
-      ]
-    },
-    {
-      "name": "rolisteam",
-      "buildsystem": "qmake",
-      "build-options": {
-          "env": {
-              "QMAKEPATH": "/app/lib"
-          }
-      },
-      "config-opts": [
-          "QMAKE_INCDIR+=/app/include/QtWebEngine",
-          "QMAKE_INCDIR+=/app/include/QtWebEngineCore",
-          "QMAKE_INCDIR+=/app/include/QtWebEngineWidgets"
-      ],
-      "post-install": [
-        "mv /app/rolisteam /app/bin/rolisteam",
-        "rm /app/roliserver",
-        "install -Dm644 org.rolisteam.rolisteam.desktop /app/share/applications/org.rolisteam.rolisteam.desktop",
-        "install -Dm644 org.rolisteam.rolisteam.metainfo.xml /app/share/appdata/org.rolisteam.rolisteam.metainfo.xml",
-        "install -Dm644 org.rolisteam.rolisteam.svg /app/share/icons/hicolor/scalable/apps/org.rolisteam.rolisteam.svg"
-      ],
-      "sources": [
-        {
-          "type": "git",
-          "url": "https://invent.kde.org/rolisteam/rolisteam.git",
-          "tag": "v1.9.3",
-          "commit": "2506e6646efbeb7f30a94f6953d01400b051128e"
-        },
-        {
-          "type": "file",
-          "path": "org.rolisteam.rolisteam.desktop"
-        },
-        {
-          "type": "file",
-          "path": "org.rolisteam.rolisteam.metainfo.xml"
-        },
-        {
-          "type": "file",
-          "path": "org.rolisteam.rolisteam.svg"
-        }
-      ]
-    }
-  ]
+    ]
 }
