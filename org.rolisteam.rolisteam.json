@@ -31,25 +31,6 @@
           "tag": "v20.12.0",
           "commit": "50d31048dabcc20a47dee28239bee37a15f48b71"
         }
-      ],
-      "modules": [
-        {
-          "name": "openal",
-          "buildsystem": "cmake-ninja",
-          "config-opts": [
-              "-DCMAKE_POLICY_VERSION_MINIMUM=3.5",
-              "-DALSOFT_EXAMPLES=OFF",
-              "-DALSOFT_TESTS=OFF"
-          ],
-          "sources": [
-            {
-              "type": "git",
-              "url": "https://github.com/kcat/openal-soft.git",
-              "tag": "openal-soft-1.18.2",
-              "commit": "ce6076091bac3c00cd10803916e8911495580bd0"
-            }
-          ]
-        }
       ]
     },
     {
