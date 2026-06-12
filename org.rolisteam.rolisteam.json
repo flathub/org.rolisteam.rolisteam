@@ -26,11 +26,18 @@
             "name": "rolisteam",
             "buildsystem": "cmake-ninja",
             "config-opts": ["-DCMAKE_BUILD_TYPE:STRING=Release", "-DBUILD_TESTING:BOOL=OFF"],
+            "post-install": [
+                "install -Dm644 org.rolisteam.rolisteam.metainfo.xml /app/share/metainfo/org.rolisteam.rolisteam.metainfo.xml"
+            ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/rolisteam/rolisteam.git",
                     "commit": "7ada7e0dbc298179e89e5b50a4494c33b808e88f"
+                },
+                {
+                    "type": "file",
+                    "path": "org.rolisteam.rolisteam.metainfo.xml"
                 }
             ]
         }
