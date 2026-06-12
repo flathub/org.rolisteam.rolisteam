@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Rolisteam
-Icon=org.rolisteam.rolisteam
-Version=1.1
-Comment=Manage your role playing game
-Exec=rolisteam
-Terminal=false
-Categories=Game;
