@@ -14,7 +14,7 @@
         "--socket=wayland",
         "--share=network",
         "--socket=pulseaudio",
-        "--filesystem=home",
+        "--filesystem=xdg-documents",
         "--env=TMPDIR=/var/tmp",
         "--env=GST_PLUGIN_PATH=/usr/lib/x86_64-linux-gnu/gstreamer-1.0/:/usr/lib/aarch64-linux-gnu/gstreamer-1.0/"
     ],
@@ -30,7 +30,6 @@
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/rolisteam/rolisteam.git",
-                    "branch": "release/1.10",
                     "commit": "7ada7e0dbc298179e89e5b50a4494c33b808e88f"
                 }
             ]
