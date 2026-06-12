@@ -29,6 +29,7 @@
                 "-DBUILD_TESTING:BOOL=OFF"
             ],
             "post-install": [
+                "rm -f /app/share/metainfo/org.rolisteam.rolisteam.appdata.xml",
                 "install -Dm644 org.rolisteam.rolisteam.metainfo.xml /app/share/metainfo/org.rolisteam.rolisteam.metainfo.xml"
             ],
             "sources": [
