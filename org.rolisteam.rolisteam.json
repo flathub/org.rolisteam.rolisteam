@@ -24,7 +24,10 @@
         {
             "name": "rolisteam",
             "buildsystem": "cmake-ninja",
-            "config-opts": ["-DCMAKE_BUILD_TYPE:STRING=Release", "-DBUILD_TESTING:BOOL=OFF"],
+            "config-opts": [
+                "-DCMAKE_BUILD_TYPE:STRING=Release", 
+                "-DBUILD_TESTING:BOOL=OFF"
+            ],
             "post-install": [
                 "install -Dm644 org.rolisteam.rolisteam.metainfo.xml /app/share/metainfo/org.rolisteam.rolisteam.metainfo.xml"
             ],
